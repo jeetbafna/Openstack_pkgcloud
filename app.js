@@ -57,9 +57,20 @@ app.use(function(err, req, res, next) {
  		console.log(err);
  	}
  	else{
- 		console.log("The servers are:");
+ 		console.log("The images are:");
  		console.log(images);
  	}
  });
+
+ openstack.getServers(function(err,servers){
+ 	if(err){
+ 		console.log(err);
+ 	}
+ 	else{
+ 		console.log("The servers are:");
+ 		console.log(servers);
+ 	}
+ });
+
 
 module.exports = app;
