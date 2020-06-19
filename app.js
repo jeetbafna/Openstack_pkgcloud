@@ -71,6 +71,15 @@ app.use(function(err, req, res, next) {
  		console.log(servers);
  	}
  });
+openstack.getComputeService(function(err,service){
+ 	if(err){
+ 		console.log(err);
+ 	}
+ 	else{
+ 		console.log("The services are:");
+ 		console.log(service);
+ 	}
+ });
 
 
 module.exports = app;
