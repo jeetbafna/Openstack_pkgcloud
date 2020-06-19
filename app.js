@@ -45,9 +45,7 @@ app.use(function(err, req, res, next) {
     password: 'a10ac0db07954235',// required
     authUrl: 'http://192.168.1.51:5000',
 	region: 'RegionOne',
-	keystoneAuthVersion: 'v3',
-	domainId: 'default',
-	domaineName: 'default' // required
+	keystoneAuthVersion: 'v3' // required
   });
 
 
