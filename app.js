@@ -45,7 +45,7 @@ app.use(function(err, req, res, next) {
     password: 'a10ac0db07954235',// required
     authUrl: 'http://192.168.1.51:5000',
 	region: 'RegionOne',
-	basePath: 'v3.0' // required
+	basePath: 'v3' // required
   });
 
 
