@@ -42,9 +42,9 @@ app.use(function(err, req, res, next) {
  var openstack = pkgcloud.compute.createClient({
     provider: 'openstack', // required
     username: 'admin',
-    password: 'a10ac0db07954235',
-    region: 'RegionOne', // required
-    authUrl: 'http://192.168.1.51:5000' // required
+    password: 'a10ac0db07954235',// required
+    authUrl: 'http://192.168.1.51:5000',
+	region: 'RegionOne' // required
   });
 
  console.log("Authentication Complete",openstack);
