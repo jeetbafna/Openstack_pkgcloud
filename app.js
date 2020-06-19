@@ -71,13 +71,13 @@ app.use(function(err, req, res, next) {
  		console.log(servers);
  	}
  });
-openstack.getComputeService(function(err,service){
+openstack.getHypervisors(function(err,hypervisor){
  	if(err){
  		console.log(err);
  	}
  	else{
- 		console.log("The services are:");
- 		console.log(service);
+ 		console.log("The hypervisors are:");
+ 		console.log(hypervisor);
  	}
  });
 
