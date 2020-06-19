@@ -44,10 +44,10 @@ app.use(function(err, req, res, next) {
     username: 'admin',
     password: 'a10ac0db07954235',// required
     authUrl: 'http://192.168.1.51:5000',
-	region: 'RegionOne' // required
+	region: 'RegionOne',
+	basePath: 'v3.0' // required
   });
 
- console.log("Authentication Complete",openstack);
 
  openstack.getImages(function(err,images){
  	if(err){
