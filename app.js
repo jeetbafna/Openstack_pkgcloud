@@ -71,15 +71,5 @@ app.use(function(err, req, res, next) {
  		console.log(servers);
  	}
  });
-openstack.getHypervisors(function(err,hypervisor){
- 	if(err){
- 		console.log(err);
- 	}
- 	else{
- 		console.log("The hypervisors are:");
- 		console.log(hypervisor);
- 	}
- });
-
 
 module.exports = app;
