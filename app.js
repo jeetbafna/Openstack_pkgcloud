@@ -46,8 +46,8 @@ app.use(function(err, req, res, next) {
     authUrl: 'http://192.168.1.51:5000',
 	region: 'RegionOne',
 	domainId: 'Default',
-	domainName: 'Default',
-	keystoneAuthVersion: 'v3' // required
+	keystoneAuthVersion: 'v3',
+	tenantId: '46097cca49184327bd5abcbed22a0063' // required
   });
 
 
