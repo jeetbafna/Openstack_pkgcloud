@@ -40,15 +40,16 @@ app.use(function(err, req, res, next) {
 });
 
  var openstack = pkgcloud.compute.createClient({
-    provider: 'openstack', // required
+    provider: 'openstack',
+    keystoneAuthVersion: 'v3',
+    authUrl: 'http://192.168.1.51:5000', // required
     username: 'admin',
     password: 'a10ac0db07954235',// required
-    authUrl: 'http://192.168.1.51:5000',
 	region: 'RegionOne',
-	domainId: 'Default',
-	keystoneAuthVersion: 'v3',
+	domainId: 'default',
 	tenantId: '46097cca49184327bd5abcbed22a0063' // required
   });
+  console.log(openstack);
 
 
  openstack.getImages(function(err,images){
