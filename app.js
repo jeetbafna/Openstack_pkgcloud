@@ -49,13 +49,13 @@ app.use(function(err, req, res, next) {
 
  console.log("Authentication Complete",openstack);
 
- openstack.getServers(function(err,servers){
+ openstack.getImages(function(err,images){
  	if(err){
  		console.log(err);
  	}
  	else{
  		console.log("The servers are:");
- 		console.log(servers);
+ 		console.log(images);
  	}
  });
 
