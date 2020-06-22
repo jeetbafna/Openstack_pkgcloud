@@ -72,7 +72,7 @@ app.use(function(err, req, res, next) {
  	}
  });
 
- openstack.getServer('inst1',function(err,server){
+ openstack.getServer('8ac1a4ec-0059-4a53-882a-951dbb6c3807',function(err,server){
  	if(err){
  		console.log(err);
  	}
