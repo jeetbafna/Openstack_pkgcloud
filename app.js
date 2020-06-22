@@ -72,4 +72,14 @@ app.use(function(err, req, res, next) {
  	}
  });
 
+ openstack.getServer('inst1',function(err,server){
+ 	if(err){
+ 		console.log(err);
+ 	}
+ 	else{
+ 		console.log("The server is:");
+ 		console.log(server);
+ 	}
+ });
+
 module.exports = app;
