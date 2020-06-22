@@ -4,9 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var pkgcloud = require('pkgcloud');
+var mysql = require('mysql');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
 
 var app = express();
 
@@ -81,5 +83,22 @@ app.use(function(err, req, res, next) {
  		console.log(server);
  	}
  });
+
+
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "123456"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  con.query("SHOW databases;", function (err, result) {
+    if (err) throw err;
+    console.log(result);
+  });
+});
 
 module.exports = app;
